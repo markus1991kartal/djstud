@@ -8,10 +8,13 @@
     {% for article in articles %}
         <h1>{{ article.title_text }}</h1>
         <p>{{ article.body_text }}</p>
-        <p>text by: {{ article.by_auth }}</p>
+        <p> text by: {{ article.by_auth }}</p>
+        <form method="POST">
+            {% csrf_token %}
         <table>
             {{ empty_form }}
         </table>
+        <input type="submit" value="Send">
     {% endfor %}
 </body>
 </html>

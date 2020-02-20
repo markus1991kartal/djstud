@@ -12,6 +12,11 @@ class Article(models.Model):
     def __str__(self):
         return self.title_text
 
-#class Comment(models.Model):
-#    comment = models.ForeignKey(Article, on_delete=models.Cascade, related_name='comments')
-#    comment_text = models.TextField()
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
+    comment_text = models.TextField()
+    comment_auth = models.TextField()
+
+
+    def __str__(self):
+        return 'Comment by {} on {}.format(self.comment_auth, self.comment_text)'
