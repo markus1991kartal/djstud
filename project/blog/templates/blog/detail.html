@@ -1,0 +1,7 @@
+{% for article in articles %}
+    <div>
+        <h1>{{ article.title_text }}</h1>
+        <p>{{ article.body_text }}</p>
+        <p> posted by: {{ article.by_auth }}</p>
+    </div>
+{% endfor %}
