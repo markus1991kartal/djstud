@@ -1,7 +1,17 @@
-{% for article in articles %}
-    <div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Blog with some comments</title>
+</head>
+<body>
+    {% for article in articles %}
         <h1>{{ article.title_text }}</h1>
         <p>{{ article.body_text }}</p>
-        <p> posted by: {{ article.by_auth }}</p>
-    </div>
-{% endfor %}
+        <p>text by: {{ article.by_auth }}</p>
+        <table>
+            {{ empty_form }}
+        </table>
+    {% endfor %}
+</body>
+</html>

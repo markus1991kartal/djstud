@@ -12,3 +12,6 @@ class Article(models.Model):
     def __str__(self):
         return self.title_text
 
+#class Comment(models.Model):
+#    comment = models.ForeignKey(Article, on_delete=models.Cascade, related_name='comments')
+#    comment_text = models.TextField()

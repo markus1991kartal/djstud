@@ -8,4 +8,5 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', views.art_pub, name='art_pub'),
+#    path('', views.art_comm, name='art_comm'),
 ]
